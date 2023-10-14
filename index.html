@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Center a Div with Bootstrap 5</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="text-center">
+      <!-- Your content goes here -->
+      <h1 id="counter">0</h1>
+      <button class="btn btn-primary" onclick="increment()">Increment</button>
+      <button class="btn btn-danger" onclick="decrement()">Decrement</button>
+      <button class="btn btn-secondary" onclick="reset()">Reset</button>
+    </div>
+  </div>
+
+  <script>
+      function increment() {
+        // Selecting the <h1> element with id "counter"
+        let h1Element = document.getElementById("counter");
+        // Getting the text content of the <h1> element
+        let h1Text = h1Element.textContent;
+        h1Text = parseInt(h1Text) + 1;
+        // Updating the text content of the <h1> element
+        h1Element.textContent = h1Text;
+
+      }
+
+      function decrement() {
+        // Selecting the <h1> element with id "counter"
+        let h1Element = document.getElementById("counter");
+        // Getting the text content of the <h1> element
+        let h1Text = h1Element.textContent;
+        h1Text = parseInt(h1Text) - 1;
+        // Updating the text content of the <h1> element
+        h1Element.textContent = h1Text;
+      }
+
+      function reset() {
+        // Selecting the <h1> element with id "counter"
+        let h1Element = document.getElementById("counter");
+        // Getting the text content of the <h1> element
+        let h1Text = h1Element.textContent;
+        h1Element.textContent = 0;
+      }
+
+
+
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
